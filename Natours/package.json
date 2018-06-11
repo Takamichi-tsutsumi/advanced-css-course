@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "serve ./",
+    "start:watch": "yarn run build:watch & yarn start",
     "build": "node-sass --include-path scss sass/main.scss ./css/style.css",
     "build:watch":
       "node-sass --include-path scss sass/main.scss ./css/style.css -w",
@@ -14,5 +16,8 @@
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.7.2"
+  },
+  "dependencies": {
+    "serve": "^6.5.3"
   }
 }
